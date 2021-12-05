@@ -18,7 +18,7 @@ class ViewController: UIViewController {
            ("What is the Model in MVC responsible for?", "Model objects are responsible for the data of our application. It is important to note that Model objects know nothing about the user interface. An example of a Model could be a list of questions and answers."),
            ("What is the View in MVC responsible for?", "View objects are objects that can be seen by the user (objects you drag into the storyboard). Some examples are labels and buttons."),
            ("What is the Controller in MVC responsible for?", "Controller objects facilitate the communication between the Model and the View since the Model and the View should never directly talk to each other (remember the Model knows nothing about the user interface).")
-       ]
+       ]//end of quiz bank
        var currentQuestion = 0
        @IBAction func answerButtonPressed(_ sender: UIButton) {
            // if answerLabel is not hidden, then make it hidden
