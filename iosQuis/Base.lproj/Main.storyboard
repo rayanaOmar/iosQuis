@@ -1,24 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iosQuis" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aIt-on-eom">
+                                <rect key="frame" x="15" y="78" width="384" height="72"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R7u-Ue-KX5">
+                                        <rect key="frame" x="0.0" y="21" width="72" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Answer"/>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Kf-qY-n6m"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WDt-2E-BuO">
+                                        <rect key="frame" x="330" y="20" width="54" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                                        <connections>
+                                            <action selector="nextButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ylt-uc-iqw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="R7u-Ue-KX5" firstAttribute="leading" secondItem="aIt-on-eom" secondAttribute="leading" id="00X-Bd-H7L"/>
+                                    <constraint firstAttribute="trailing" secondItem="WDt-2E-BuO" secondAttribute="trailing" id="0cL-NL-VOn"/>
+                                    <constraint firstAttribute="bottom" secondItem="R7u-Ue-KX5" secondAttribute="bottom" constant="20" symbolic="YES" id="7Tl-nL-0tN"/>
+                                    <constraint firstItem="R7u-Ue-KX5" firstAttribute="top" secondItem="aIt-on-eom" secondAttribute="top" constant="21" id="MDO-n1-IFG"/>
+                                    <constraint firstAttribute="bottom" secondItem="WDt-2E-BuO" secondAttribute="bottom" constant="21" id="MuB-ta-Oj9"/>
+                                    <constraint firstItem="WDt-2E-BuO" firstAttribute="top" secondItem="aIt-on-eom" secondAttribute="top" constant="20" symbolic="YES" id="pxB-Jx-zDK"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is the first step of iOS development" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yg-R3-xqU">
+                                <rect key="frame" x="51" y="51" width="312" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZH-Y6-swl">
+                                <rect key="frame" x="0.0" y="417.5" width="414" height="61"/>
+                                <string key="text">Create the user interface. As we create the UI, we will get a better understanding of our application. Then we breathe life into our application</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aIt-on-eom" firstAttribute="top" secondItem="1yg-R3-xqU" secondAttribute="bottom" constant="6" id="4v2-cO-yBB"/>
+                            <constraint firstItem="aIt-on-eom" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="7Xw-5S-1nh"/>
+                            <constraint firstItem="aIt-on-eom" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L18-XY-IUN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aIt-on-eom" secondAttribute="trailing" constant="15" id="Mph-Rj-7Ax"/>
+                            <constraint firstItem="hZH-Y6-swl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bPp-Me-DzF"/>
+                            <constraint firstItem="1yg-R3-xqU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="7" id="f0O-9w-tvT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hZH-Y6-swl" secondAttribute="trailing" id="fqv-Li-xah"/>
+                            <constraint firstItem="hZH-Y6-swl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hi1-M1-Xii"/>
+                            <constraint firstItem="1yg-R3-xqU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mxL-nS-Y4x"/>
+                            <constraint firstItem="hZH-Y6-swl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uEQ-Dy-tNN"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="hZH-Y6-swl" id="LUn-IF-c1i"/>
+                        <outlet property="questionLabel" destination="1yg-R3-xqU" id="zr5-3E-sk5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="178.2608695652174" y="44.866071428571423"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
